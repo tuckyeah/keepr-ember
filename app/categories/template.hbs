@@ -1,0 +1,8 @@
+<h1>My Categories</h1>
+<ul>
+{{#each model as |category|}}
+  {{#link-to 'category' category}}
+    <h3>{{category.name}}</h3>
+  {{/link-to}}
+{{/each}}
+</ul>
