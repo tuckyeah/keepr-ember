@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('users');
   this.route('categories');
   this.route('category', {path: '/categories/:category_id'});
+  this.route('category-content', {path: '/category_contents/:content_id'});
 });
 
 export default Router;

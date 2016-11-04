@@ -1,5 +1,7 @@
 import DS from 'ember-data';
+import { hasMany } from 'ember-data/relationships';
 
 export default DS.Model.extend({
-  name: DS.attr('string')
+  name: DS.attr('string'),
+  things: hasMany('thing')
 });
