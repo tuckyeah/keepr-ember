@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['user'],
-  user: null
+  // queryParams: ['user'],
+  // user: null
 });

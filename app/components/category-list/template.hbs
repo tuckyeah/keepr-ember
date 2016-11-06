@@ -1,5 +1,8 @@
 <h3 class="category-header">
-  {{category.name}}
+  {{category-list/card title=category.name}}
+  <button class="btn btn-x btn-primary" {{action 'edit'}}>
+    Edit
+  </button>
 </h3>
 
 <ul>

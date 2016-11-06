@@ -19,6 +19,6 @@ export default Ember.Route.extend({
       cat.save().then(() => {
         this.refresh();
       });
-    }
+    },
   }
 });
