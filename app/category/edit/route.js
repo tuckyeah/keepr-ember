@@ -6,6 +6,10 @@ export default Ember.Route.extend({
       category.save().then(()=> {
         this.transitionTo('category');
       });
+    },
+    cancel(category) {
+      category.rollbackAttributes();
+      history.back();
     }
   }
 });
