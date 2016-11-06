@@ -4,6 +4,8 @@
   {{#link-to 'category' category}}
     {{category-list/card title=category.name}}
   {{/link-to}}
+  {{category-delete category=category
+                    delete='delete'}}
 {{/each}}
 </ul>
 {{category-create createCat='createCat'}}

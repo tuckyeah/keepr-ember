@@ -20,5 +20,9 @@ export default Ember.Route.extend({
         this.refresh();
       });
     },
+    delete (category) {
+      category.deleteRecord();
+      category.save();
+    }
   }
 });
