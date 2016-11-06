@@ -2,7 +2,9 @@
 <ul>
 {{#each model as |category|}}
   {{#link-to 'category' category}}
-    <h3>{{category.name}}</h3>
+    {{category-list/card title=category.name}}
+    {{category.user_id}}
   {{/link-to}}
 {{/each}}
 </ul>
+{{category-create createCat='createCat'}}

@@ -6,7 +6,7 @@
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
         <li>{{#link-to "users"}}Users{{/link-to}}</li>
-        <li>{{#link-to "categories"}}Categories{{/link-to}}</li>
+        <li>{{#link-to "categories" (query-params direction="asc")}}Categories{{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">

@@ -1,6 +1,9 @@
-<h3>{{category.name}}</h3>
-{{#each category.things as |thing|}}
-  <p>
-    {{thing.name}}
-  </p>
-{{/each}}
+<h3 class="category-header">
+  {{category.name}}
+</h3>
+
+<ul>
+  {{#each category.things as |thing|}}
+    {{category-list/thing thing=thing}}
+  {{/each}}
+</ul>
