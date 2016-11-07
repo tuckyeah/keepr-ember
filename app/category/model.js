@@ -4,5 +4,6 @@ import { hasMany } from 'ember-data/relationships';
 export default DS.Model.extend({
   name: DS.attr('string'),
   user_id: DS.attr('number'),
-  things: hasMany('thing')
+  things: hasMany('thing'),
+  contents: hasMany('category-content')
 });

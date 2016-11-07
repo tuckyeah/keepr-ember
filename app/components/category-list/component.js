@@ -7,6 +7,9 @@ export default Ember.Component.extend({
     },
     deleteThing (thing) {
       this.sendAction('deleteThing', thing);
+    },
+    showDetails (thing) {
+      this.sendAction('showDetails', thing);
     }
   }
 });
