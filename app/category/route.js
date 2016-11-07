@@ -9,5 +9,12 @@ export default Ember.Route.extend({
     edit (category) {
       this.transitionTo('category.edit', category);
     },
+    createThing (newThing) {
+      let thing = this.get('store').createRecord('thing', newThing);
+      thing.save()
+      .then(()=> {
+        this.refresh();
+      });
+    }
   }
 });
