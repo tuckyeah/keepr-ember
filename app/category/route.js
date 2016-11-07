@@ -8,6 +8,6 @@ export default Ember.Route.extend({
   actions: {
     edit (category) {
       this.transitionTo('category.edit', category);
-    },
+    }
   }
 });

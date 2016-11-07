@@ -1,7 +1,9 @@
 import DS from 'ember-data';
-import { hasMany } from 'ember-data/relationships';
+import { belongsTo } from 'ember-data/relationships';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
-  categories: hasMany('category')
+  done: DS.attr('boolean'),
+  notes: DS.attr('string'),
+  category: belongsTo('category')
 });
