@@ -1,6 +1,6 @@
 <span {{action 'toggleDone'}}>
-  {{#if thing.isDone.done}}
-    <span style="text-decoration: line-through">{{thing.name}}</span>
+  {{#if thing.content_data.done}}
+    <span class='item-completed'>{{thing.name}}</span>
   {{else}}
     {{thing.name}}
   {{/if}}

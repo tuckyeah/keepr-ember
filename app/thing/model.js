@@ -6,8 +6,8 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   categories: hasMany('category'),
   contents: hasMany('category-content'),
-  isDone: Ember.computed(function() {
+  content_data: Ember.computed(function() {
     let contents = this.get('store').findRecord('category-content', this.id);
     return contents;
-  })
+  }),
 });
