@@ -14,7 +14,7 @@ Router.map(function () {
   this.route('category', {path: '/categories/:category_id'}, function() {
     this.route('edit');
   });
-  this.route('category-content', {path: '/categories/:category_id/contents'});
+  this.route('category-content', {path: '/category/contents/:id'});
 });
 
 export default Router;
