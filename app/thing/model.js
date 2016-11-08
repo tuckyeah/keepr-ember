@@ -4,6 +4,7 @@ import Ember from 'ember';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
+  done: DS.attr('boolean'),
   categories: hasMany('category'),
   contents: hasMany('category-content'),
   content_data: Ember.computed(function() {
