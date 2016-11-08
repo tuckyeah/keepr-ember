@@ -1,7 +1,13 @@
 <h1> {{content.name}} </h1>
+{{back-button back='back'}}
 <p>
   <strong>Notes:</strong>
 </p>
-<p>
-  {{content.notes}}
-</p>
+<ul>
+{{#each content.note_list as |note|}}
+  <li>
+    {{note}}
+  </li>
+{{/each}}
+</ul>
+{{thing-details/add-notes content=content createNote='createNote'}}

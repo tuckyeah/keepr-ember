@@ -10,6 +10,9 @@ export default Ember.Component.extend({
     },
     showDetails (thing) {
       this.sendAction('showDetails', thing);
+    },
+    back() {
+      this.sendAction('back');
     }
   }
 });

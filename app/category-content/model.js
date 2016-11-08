@@ -7,7 +7,11 @@ export default DS.Model.extend({
   notes: DS.attr('string'),
   category: belongsTo('category'),
   thing: belongsTo('thing'),
-  name: Ember.computed.alias('thing.name')
+  name: Ember.computed.alias('thing.name'),
+
+  note_list: Ember.computed('notes', function() {
+    return this.get('notes').split('\n');
+  })
 });
 
 // /category_contents

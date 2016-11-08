@@ -8,12 +8,9 @@ export default Ember.Route.extend({
     },
     showDetails (thing) {
       console.log(thing.id);
-      this.get('store').query('category-content', {
-        filter: {
-          thing: thing.id
-        }
-      }).then((contents)=> {
-        let content = contents.get('firstObject');
+      this.get('store').findRecord('category-content', thing.id)
+      .then((content) => {
+        console.log(content);
         this.transitionTo('category-content', content);
       });
     }
