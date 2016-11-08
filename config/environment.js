@@ -49,7 +49,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.baseURL = '/';
     ENV.locationType = 'hash';
+    ENV.apiHost = 'https://cryptic-fjord-23153.herokuapp.com/'
   }
 
   return ENV;
