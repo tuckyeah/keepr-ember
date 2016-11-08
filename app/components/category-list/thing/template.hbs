@@ -1,12 +1,12 @@
-<span {{action 'toggleDone'}}>
-  {{#if thing.content_data.done}}
+{{#if thing.done}}
     <span class='item-completed'>{{thing.name}}</span>
-  {{else}}
+{{else}}
     {{thing.name}}
-  {{/if}}
-</span>
+{{/if}}
 
 <button class="btn btn-danger" {{action 'deleteThing'}}>
   delete
 </button>
 <button class="btn btn-primary" {{action 'showDetails'}}>More</button>
+
+{{!-- {{thing.category_id}} --}}

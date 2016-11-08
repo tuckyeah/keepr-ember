@@ -8,7 +8,9 @@ export default DS.Model.extend({
   category: belongsTo('category'),
   thing: belongsTo('thing'),
   name: Ember.computed.alias('thing.name'),
-  isDone: Ember.computed.alias('thing.done'),
+  category_id: DS.attr('number'),
+  // isDone: Ember.computed.alias('thing.done'),
+  // thing_id: Ember.computed.alias('thing.id'),
 
   note_list: Ember.computed('notes', function() {
     if ((this.get('notes')) == null) {

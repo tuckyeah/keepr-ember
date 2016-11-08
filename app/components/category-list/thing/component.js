@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'li',
   classNameBindings: ['thingCompleted'],
-  listItemCompleted: Ember.computed.alias('thing.done'),
 
   actions: {
     toggleDone () {

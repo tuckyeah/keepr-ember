@@ -1,16 +1,17 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  auth: Ember.inject.service(),
   model (params) {
-    return this.get('store').findRecord('category-content', params.id);
-  },
+    return this.get('store').findRecord('category-content', (params.category_content_id));
 
+  },
   actions: {
     createNote(cat_cont) {
-      // console.log(cat_cont.notes);
       cat_cont.save();
     },
-    back() {
+    back(done_status) {
+      console.log(done_status);
       history.back();
     },
     toggleDone(content) {

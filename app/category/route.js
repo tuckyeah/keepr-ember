@@ -8,6 +8,19 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    deleteThing (thing) {
+      let cat_id = this.get('router.router.state.params.category.category_id');
+      this.get('store').queryRecord('category-content', {
+        thing_id: thing.id,
+        category_id: cat_id})
+      .then((content)=> {
+        content.deleteRecord();
+        content.save();
+        this.refresh();
+      }).catch((err) => {
+        console.error(err);
+      });
+    },
     edit (category) {
       this.transitionTo('category.edit', category);
     },
@@ -15,32 +28,18 @@ export default Ember.Route.extend({
       let thing = this.get('store').createRecord('thing', newThing);
       return thing.save()
       .then((response)=> {
-        console.log(response);
-        let data = {
-          category_content: {
-            thing_id: response.id,
-            category_id: response.category.id
-          }
-        };
-        console.log(data);
-        return data;
-      }).then((data)=> {
-        return this.get('auth').createContent(data);
-      }).then((data)=> {
-        console.log(data);
-        this.refresh();
+        let contents = this.get('store').createRecord('category-content', {
+          thing: response,
+          category: response.category
+        });
+        // console.log(contents);
+        // console.log(contents.save());
+        return contents.save();
+      }).then((response)=> {
+        this.transitionTo('category-content', response);
       }).catch((err)=>{
         console.error(err);
       });
-
-      //
-      // })
-      //   return this.save()
-      //   then((response)=> {
-      //
-      //   })
-      //   this.refresh();
-      // });
     },
     back() {
       history.back();

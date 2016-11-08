@@ -9,7 +9,8 @@ export default Ember.Component.extend({
       this.sendAction('toggleDone', content);
     },
     back() {
-      this.sendAction('back');
+      let done_status = this.get('content.done');
+      this.sendAction('back', done_status);
     }
   }
 });
