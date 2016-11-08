@@ -1,9 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-
   model (params) {
-    this.get('store').findRecord('category-content', params.category_content_id);
+    return this.get('store').findRecord('category-content', params.id);
   },
 
   actions: {
@@ -13,6 +12,13 @@ export default Ember.Route.extend({
     },
     back() {
       history.back();
+    },
+    toggleDone(content) {
+      content.toggleProperty('done');
+      content.save()
+      .then(()=>{
+        this.refresh();
+      });
     }
   }
 });

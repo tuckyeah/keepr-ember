@@ -8,6 +8,9 @@
 
 <ul>
   {{#each category.things as |thing|}}
-    {{category-list/thing thing=thing deleteThing='deleteThing' showDetails='showDetails'}}
+    {{category-list/thing thing=thing
+                          deleteThing='deleteThing'
+                          showDetails='showDetails'
+                          toggleDone='toggleDone'}}
   {{/each}}
 </ul>

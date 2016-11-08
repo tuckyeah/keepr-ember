@@ -5,8 +5,10 @@ export default Ember.Component.extend({
     createNote (cat_cont) {
       this.sendAction('createNote', cat_cont);
     },
+    toggleDone(content) {
+      this.sendAction('toggleDone', content);
+    },
     back() {
-      console.log("I ran");
       this.sendAction('back');
     }
   }

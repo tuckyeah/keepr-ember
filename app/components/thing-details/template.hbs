@@ -1,7 +1,8 @@
-<h1> {{content.name}} </h1>
+{{thing-details/card content=content toggleDone='toggleDone'}}
 {{back-button back='back'}}
 <p>
   <strong>Notes:</strong>
+  {{thing-details/done-button content=content toggleDone='toggleDone'}}
 </p>
 <ul>
 {{#each content.note_list as |note|}}

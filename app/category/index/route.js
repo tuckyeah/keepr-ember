@@ -7,11 +7,18 @@ export default Ember.Route.extend({
       thing.save();
     },
     showDetails (thing) {
-      console.log(thing.id);
+      console.log(this.get('router.router.state'));
       this.get('store').findRecord('category-content', thing.id)
       .then((content) => {
-        console.log(content);
         this.transitionTo('category-content', content);
+      });
+    },
+    toggleDone(thing) {
+      console.log(thing);
+      this.get('store').findRecord('category-content', thing.id)
+      .then((content)=> {
+        console.log(thing);
+        console.log(content);
       });
     }
   }

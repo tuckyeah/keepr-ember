@@ -10,7 +10,7 @@ export default Ember.Component.extend({
       let form = this.get('form');
       let cat_cont_notes = this.get('content.notes');
 
-      let updated_comment = [cat_cont_notes, form.new_comment].join('\n');
+      let updated_comment = [cat_cont_notes, form.new_comment].join(':::');
 
       let cat_cont = this.get('content');
       cat_cont.set('notes', updated_comment);

@@ -8,9 +8,14 @@ export default DS.Model.extend({
   category: belongsTo('category'),
   thing: belongsTo('thing'),
   name: Ember.computed.alias('thing.name'),
+  isDone: Ember.computed.alias('thing.done'),
 
   note_list: Ember.computed('notes', function() {
-    return this.get('notes').split('\n');
+    if ((this.get('notes')) == null) {
+      return this.get('notes');
+    } else {
+      return this.get('notes').split(':::');
+    }
   })
 });
 

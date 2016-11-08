@@ -1,4 +1,11 @@
-{{thing.name}}
+<span {{action 'toggleDone'}}>
+  {{#if thing.isDone.done}}
+    <span style="text-decoration: line-through">{{thing.name}}</span>
+  {{else}}
+    {{thing.name}}
+  {{/if}}
+</span>
+
 <button class="btn btn-danger" {{action 'deleteThing'}}>
   delete
 </button>
