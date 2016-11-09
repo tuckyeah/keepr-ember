@@ -1,4 +1,4 @@
-import ApplicationAdapter from 'keepr-ember-client/application/adapter';
+import ApplicationAdapter from 'keepr-ember/application/adapter';
 
 export default ApplicationAdapter.extend({
   // createRecord(store, type, record) {

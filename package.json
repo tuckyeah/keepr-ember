@@ -1,5 +1,5 @@
 {
-  "name": "keepr-ember-client",
+  "name": "keepr-ember",
   "version": "0.0.0",
   "description": "ember client for keepr app",
   "private": true,

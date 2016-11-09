@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   const ENV = {
-    modulePrefix: 'keepr-ember-client',
+    modulePrefix: 'keepr-ember',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

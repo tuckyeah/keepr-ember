@@ -1,4 +1,4 @@
-import ENV from 'keepr-ember-client/config/environment';
+import ENV from 'keepr-ember/config/environment';
 import ActiveModelAdapter from 'active-model-adapter';
 
 import Ember from 'ember';
