@@ -26,13 +26,21 @@
 
 ~~ Add 'What is Keepr' with a description to the index page ~~
 - Redeploy Ember and API
+  - ~~API deployed~~
+  - Ember Deployed
+- Any minor design tweaks
+  - Vertically center everything
+  - resize image
+  - fix edit title view
+  - Manage errors better
 - Finish ReadMe
   - User Stories
   - WireFrames
   - ERDs
 - Confirm Ownership of Data
 - Restrict Empty Notes
+- Vertically center everything
+- resize image
 - Confirm uniqueness of Things
-- Any minor design tweaks
 - edit item
 - delete notes
