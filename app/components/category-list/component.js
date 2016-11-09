@@ -13,6 +13,9 @@ export default Ember.Component.extend({
     },
     back() {
       this.sendAction('back');
-    }
+    },
+    toggleDone(thing) {
+      this.sendAction('toggleDone', thing)
+    },
   }
 });

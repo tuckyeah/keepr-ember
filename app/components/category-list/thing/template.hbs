@@ -1,5 +1,12 @@
-{{thing.name}}
+{{#if thing.done}}
+    <span class='item-completed'>{{thing.name}}</span>
+{{else}}
+    {{thing.name}}
+{{/if}}
+
 <button class="btn btn-danger" {{action 'deleteThing'}}>
   delete
 </button>
 <button class="btn btn-primary" {{action 'showDetails'}}>More</button>
+
+{{!-- {{thing.category_id}} --}}
