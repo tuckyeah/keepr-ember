@@ -34,7 +34,7 @@ module.exports = function (environment) {
     let port = +('GA'.split('').reduce((p, c) =>
       p + c.charCodeAt().toString(16), '')
     );
-    ENV.apiHost = `http://localhost:3000`;
+    ENV.apiHost = `http://localhost:${port}`;
   }
 
   if (environment === 'test') {
@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/keepr-ember';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://cryptic-fjord-23153.herokuapp.com'
+    ENV.apiHost = 'https://cryptic-fjord-23153.herokuapp.com';
   }
 
   return ENV;
