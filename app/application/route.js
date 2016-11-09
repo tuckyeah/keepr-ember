@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
   flashMessages: Ember.inject.service(),
+  isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
   actions: {
     signOut () {
@@ -17,6 +18,10 @@ export default Ember.Route.extend({
       });
       this.store.unloadAll();
     },
+
+    back() {
+      history.back();
+    }
 
     // error (reason) {
     //   let unauthorized = reason.errors.some((error) =>

@@ -14,7 +14,6 @@ export default AjaxService.extend({
       if (token) {
         headers.Authorization = `Token token=${token}`;
       }
-
       return headers;
     },
   }),

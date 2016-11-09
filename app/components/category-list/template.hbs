@@ -1,6 +1,29 @@
-<h3>{{category.name}}</h3>
-{{#each category.things as |thing|}}
-  <p>
-    {{thing.name}}
-  </p>
-{{/each}}
+<div class="display-inner">
+  <div class="header-center">
+    <span class="category-header">
+      Category: {{category-list/card title=category.name}}
+      <button class="edit-button" {{action 'edit'}}>
+        <i class="fa fa-pencil-square" aria-hidden="true"></i>
+        {{!-- <span style="font-size: 0.5em">edit title</span> --}}
+      </button>
+    </span>
+  </div>
+
+
+
+  <ul class="flat-list contents">
+    {{#each category.category_contents as |thing|}}
+    {{category-list/thing thing=thing
+      deleteThing='deleteThing'
+      showDetails='showDetails'
+      toggleDone='toggleDone'}}
+      {{else}}
+      <p>Nothing here yet... add something!</p>
+      {{/each}}
+
+    <li>  {{add-thing category=model createThing='createThing'}} </li>
+    </ul>
+
+
+    {{back-button back='back'}}
+  </div>

@@ -1,0 +1,166 @@
+.main-image {
+  display: block;
+  width: 60vw;
+  // margin-left: 15%;
+}
+
+.bordered {
+  border: 1px solid black;
+}
+
+img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo-center {
+  width: 100%;
+  // border: 1px solid black;
+}
+
+.small-image {
+  width: 30vw;
+  min-width: 250px;
+  margin-left: 25%;
+}
+
+.logo-header {
+  height: 70px;
+  display: block;
+  margin-top: -25%;
+}
+
+.all-categories,
+.category-header {
+  font-size: 4em;
+  font-weight: 900;
+  text-align: center;
+}
+
+.thing-header {
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.display-inner {
+  margin: 10px;
+  padding: 10px;
+
+  ul {
+    padding: 0px;
+  }
+
+  .flat-list li {
+    padding: 10px 15px;
+    list-style: none;
+    font-size: 2em;
+    letter-spacing: 0.1em;
+
+    .delete-button {
+      float: right;
+      // margin-top: 2%; // this needs to be in a breakpoint
+      color: #fff;
+      background-color: darken($watermelon, 25%);
+
+      &:hover {
+        background-color: darken($watermelon, 30%);
+      }
+    }
+  }
+
+  .flat-list.contents li {
+    font-size: 1.5em;
+  }
+}
+
+.header-center {
+  margin: 0 auto;
+  text-align: center;
+
+  .category-header {
+    text-align: center;
+    font-size: 3em;
+  }
+
+  .header-buttons {
+    display: inline;
+    margin: 0 auto;
+  }
+}
+
+.thing-detail {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.note-box {
+  border: 1px solid black;
+  width: 60%;
+  margin: auto;
+  padding: 25px;
+
+  .note-header {
+    font-size: 1.5em;
+    text-decoration: underline;
+    font-weight: 900;
+  }
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    border-bottom: 1px solid $light-blue;
+    line-height: 2.5em;
+  }
+  li:last-child {
+    margin-top: 10px;
+    border: 0px;
+  }
+
+  .save-button {
+    float:right;
+  }
+}
+
+.bottom-button-box {
+  width: 60%;
+  margin: auto;
+  text-align:center;
+  padding: 20px;
+
+  .done-button {
+    margin: auto;
+    float: left;
+  }
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.transparent {
+  opacity: 0.1;
+  z-index: -99;
+}
+
+.flex {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

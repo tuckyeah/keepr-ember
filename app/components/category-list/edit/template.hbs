@@ -1,0 +1,18 @@
+<h3 class="category-header">
+  <form {{action 'save' on='submit'}}>
+    {{input placeholder=category.name value=category.new_name}}
+    <button class="btn btn-x btn-primary" type="submit">
+      Save
+    </button>
+  </form>
+
+  <button class="btn btn-x btn-danger" {{action 'cancel'}}>
+    Cancel
+  </button>
+</h3>
+
+<ul>
+  {{#each category.things as |thing|}}
+    {{category-list/thing thing=thing}}
+  {{/each}}
+</ul>

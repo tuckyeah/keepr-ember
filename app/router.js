@@ -11,8 +11,10 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('categories');
-  this.route('category', {path: '/categories/:category_id'});
-  this.route('category-content', {path: '/category_contents/:content_id'});
+  this.route('category', {path: '/categories/:category_id'}, function() {
+    this.route('edit');
+  });
+  this.route('category-content', {path: '/category_contents/:category_content_id'});
 });
 
 export default Router;

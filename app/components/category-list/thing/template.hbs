@@ -1,0 +1,9 @@
+{{#if thing.done}}
+    <span class='thing-detail item-completed' {{action 'showDetails'}}>{{thing.name}}</span>
+{{else}}
+    <span class="thing-detail" {{action 'showDetails'}}>{{thing.name}}</span>
+{{/if}}
+
+<button class="btn delete-button" {{action 'deleteThing'}}>
+  <i class="fa fa-trash-o" aria-hidden="true"></i>
+</button>
