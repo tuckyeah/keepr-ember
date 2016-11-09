@@ -12,6 +12,10 @@ export default Ember.Component.extend({
     back() {
       let done_status = this.get('content.done');
       this.sendAction('back', done_status);
+    },
+    deleteContent() {
+      let thing = this.get('content');
+      this.sendAction('deleteContent', thing);
     }
   }
 });

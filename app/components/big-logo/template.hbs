@@ -1,3 +1,17 @@
-<div {{action "toggleTest"}} class="logo-center {{if isBordered "bordered"}}">
-  <img class="main-image" src="assets/imgs/keepr-small.png" alt="" />
+<div {{action "toggleTest"}} class="logo-center {{if isHidden "transparent"}}">
+  <img class="main-image" src="assets/imgs/keepr-placeholder.png" alt="" />
+</div>
+
+<div class="{{unless isHidden "hidden"}}" style="margin-top: -40%; z-index: 100; width: 80%; margin-left: auto; margin-right: auto">
+  <p style="font-size: 24px; text-align: justify">
+    With Keepr, you can create lists of categories based on your own interests and
+    fill them up with whatever anything and everything you want to do, try, watch, taste, see, experience...<br/>
+        <br/>
+    Make notes about every item you add, and then cross them off when you've finally had a chance to give it a shot.
+  </p>
+
+  <br />
+
+  <p style="text-align: center; font-weight: 900; font-size: 30px;">Forget Forgetting. Keep track.</p>
+
 </div>

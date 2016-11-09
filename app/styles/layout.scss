@@ -96,6 +96,10 @@ img {
 
 .thing-detail {
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .note-box {
@@ -143,4 +147,20 @@ img {
 .clearfix {
   overflow: auto;
   zoom: 1;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.transparent {
+  opacity: 0.1;
+  z-index: -99;
+}
+
+.flex {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

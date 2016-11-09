@@ -20,6 +20,15 @@ export default Ember.Route.extend({
       .then(()=>{
         this.refresh();
       });
+    },
+    deleteContent(content) {
+      content.deleteRecord();
+      content.save()
+      .then(()=> {
+        history.back();
+      }).catch((err) => {
+        console.error(err);
+      });
     }
   }
 });

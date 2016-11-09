@@ -1,11 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  isBordered: false,
+  isHidden: false,
   actions: {
     toggleTest() {
-      this.toggleProperty('isBordered');
+      this.toggleProperty('isHidden');
     }
   }
-
 });
