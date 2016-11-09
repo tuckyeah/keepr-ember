@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import TextFieldInitializer from 'keepr-ember-client/initializers/text-field';
+import TextFieldInitializer from 'keepr-ember/initializers/text-field';
 import { module, test } from 'qunit';
 
 let application;

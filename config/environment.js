@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   var ENV = {
-    modulePrefix: 'keepr-ember-client',
+    modulePrefix: 'keepr-ember',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -50,7 +50,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/';
+    ENV.rootURL = '/keepr-ember';
     ENV.locationType = 'hash';
     ENV.apiHost = 'https://cryptic-fjord-23153.herokuapp.com'
   }
