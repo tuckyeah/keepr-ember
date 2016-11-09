@@ -1,4 +1,4 @@
-import ApplicationSerializer from 'keepr-ember-client/application/serializer';
+import ApplicationSerializer from 'keepr-ember/application/serializer';
 import Ember from 'ember';
 
 export default ApplicationSerializer.extend({

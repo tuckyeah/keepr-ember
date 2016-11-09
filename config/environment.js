@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   'use strict';
-  var ENV = {
+  const ENV = {
     modulePrefix: 'keepr-ember',
     environment: environment,
     rootURL: '/',
