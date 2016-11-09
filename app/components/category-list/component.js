@@ -15,7 +15,11 @@ export default Ember.Component.extend({
       this.sendAction('back');
     },
     toggleDone(thing) {
-      this.sendAction('toggleDone', thing)
+      this.sendAction('toggleDone', thing);
     },
+    createThing(newThing) {
+      newThing.category = this.get('category');
+      this.sendAction('createThing', newThing);
+    }
   }
 });

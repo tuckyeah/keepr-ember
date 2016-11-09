@@ -1,11 +1,21 @@
-<h1>My Categories</h1>
-<ul>
-{{#each model as |category|}}
-  {{#link-to 'category' category}}
-    {{category-list/card title=category.name}}
-  {{/link-to}}
-  {{category-delete category=category
-                    delete='delete'}}
-{{/each}}
-</ul>
-{{category-create createCat='createCat'}}
+<div class="display-inner">
+  <h1 class="all-categories">My Categories</h1>
+  <ul class="flat-list">
+  {{#each model as |category|}}
+
+      <li>
+      {{#link-to 'category' category}}
+        {{category-list/card title=category.name}}
+      {{/link-to}}
+
+      {{category-delete category=category
+                      delete='delete'}}
+      </li>
+  {{/each}}
+  <li>
+    {{category-create createCat='createCat'}}
+  </li>
+
+  </ul>
+
+</div>

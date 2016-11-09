@@ -9,17 +9,8 @@ export default Ember.Route.extend({
 
   actions: {
     deleteThing (thing) {
-      let cat_id = this.get('router.router.state.params.category.category_id');
-      this.get('store').queryRecord('category-content', {
-        thing_id: thing.id,
-        category_id: cat_id})
-      .then((content)=> {
-        content.deleteRecord();
-        content.save();
-        this.refresh();
-      }).catch((err) => {
-        console.error(err);
-      });
+      thing.deleteRecord();
+      thing.save();
     },
     edit (category) {
       this.transitionTo('category.edit', category);

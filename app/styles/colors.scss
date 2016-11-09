@@ -1,0 +1,105 @@
+$black: rgba(0, 0, 0, 1);
+$white: rgba(255, 255, 255, 1);
+
+// gives a transparent white
+@function white($opacity) {
+  @return rgba(255, 255, 255, $opacity)
+};
+
+
+// gives a transparent black
+@function black($opacity) {
+  @return rgba(0, 0, 0, $opacity)
+};
+
+
+@function shade($color, $percentage) {
+  @return mix($black, $color, $percentage)
+};
+
+@function tint($color, $percentage) {
+  @return mix($white, $color, $percentage)
+};
+
+//Phaedra
+$tangerine: #FF6138;
+$pale-yellow: #FFFF9D;
+$light-green: #BEEB9F;
+$mint-green: #79BD8F;
+$teal: #00A388;
+
+// CS04
+$light-yellow: #F6F792;
+$dusty-navy: #333745;
+$light-blue: #77C4D3;
+$pale-blue: #DAEDE2;
+$bright-pink: #EA2E49;
+
+$dark-red: #B9121B;
+
+
+// vintage card
+
+$dusty-purple: #5C4B51;
+$sea-blue: #8CBEB2;
+$cream: #F2EBBF;
+$orange: #F3B562;
+$watermelon: #F06060;
+
+$maroon: #911146;
+
+$page-background: $white;
+$header-color: $watermelon;
+
+$inner-color: $light-green;
+
+$border-color: $maroon;
+
+
+body {
+  background-color: $page-background;
+}
+
+.flat-list li {
+  border-top: 1px solid lighten($dusty-purple, 50%);
+
+  &:hover {
+    background-color: tint($mint-green, 95%)
+  }
+
+  a {
+    color: $teal;
+  }
+}
+
+.flat-list.contents li {
+  color: $tangerine;
+}
+
+.display-inner {
+  border: 3px solid $dusty-purple;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.all-categories {
+  color: $header-color;
+}
+
+.category-header {
+  color: $teal;
+}
+
+.thing-header {
+  color: $tangerine;
+}
+
+.edit-button {
+  font-size: .4em;
+  color: $dusty-navy;
+  border: 0px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: $white;
+  // margin-bottom: 5%;
+}

@@ -1,6 +1,8 @@
 <form {{action 'createNote' on='submit'}}>
+  <span style="display: inline-block; width: 80%" >
   {{input placeholder='Notes...'
           value=form.new_comment}}
+        </span>
 
-  <button class="btn btn-success" type="submit">Save</button>
+  <button class="btn btn-success save-button" type="submit">Save</button>
 </form>

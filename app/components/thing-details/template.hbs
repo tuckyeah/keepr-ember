@@ -1,14 +1,29 @@
 {{thing-details/card content=content toggleDone='toggleDone'}}
-{{back-button back='back'}}
-<p>
-  <strong>Notes:</strong>
-  {{thing-details/done-button content=content toggleDone='toggleDone'}}
-</p>
-<ul>
-{{#each content.note_list as |note|}}
+<p style="text-align: center; font-style: italic">From Category: {{content.category.name}} </p>
+
+<div class="note-box">
+  <p class="note-header">
+    Notes:
+  </p>
+  <ul>
+  {{#each content.note_list as |note|}}
+    <li>
+      - {{note}}
+    </li>
+  {{/each}}
   <li>
-    {{note}}
+    {{thing-details/add-notes content=content createNote='createNote'}}
   </li>
-{{/each}}
-</ul>
-{{thing-details/add-notes content=content createNote='createNote'}}
+  </ul>
+</div>
+
+<div class="bottom-button-box clearfix">
+  {{thing-details/done-button content=content toggleDone='toggleDone'}}
+  <button class="btn btn-danger" style="display: inline-block; float: right;" {{action 'deleteThing'}}>
+    Forget about it!
+  </button>
+</div>
+
+<div style="width: 50%; text-align: center; margin: auto;">
+  {{back-button back='back'}}
+</div>

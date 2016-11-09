@@ -6,6 +6,7 @@ export default Ember.Component.extend({
       this.sendAction('createNote', cat_cont);
     },
     toggleDone(content) {
+      console.log(content);
       this.sendAction('toggleDone', content);
     },
     back() {

@@ -9,7 +9,6 @@ export default ApplicationAdapter.extend({
 
     // a serialized record is an Ember object turned into a JS object
     let categoryId = record.record.category.id;
-    console.log(categoryId);
 
     let url = `${api}/categories/${categoryId}/things`;
 
