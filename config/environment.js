@@ -2,11 +2,12 @@
 
 module.exports = function (environment) {
   'use strict';
-  const ENV = {
+  var ENV = {
     modulePrefix: 'keepr-ember-client',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:3000',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -49,9 +50,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/';
+    ENV.rootURL = '/';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://cryptic-fjord-23153.herokuapp.com/'
+    ENV.apiHost = 'https://cryptic-fjord-23153.herokuapp.com'
   }
 
   return ENV;
