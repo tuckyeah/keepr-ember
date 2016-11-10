@@ -56,9 +56,9 @@ $inner-color: $light-green;
 $border-color: $maroon;
 
 
-body {
-  background-color: $page-background;
-}
+// body {
+//   background-color: darken($page-background, 5%);
+// }
 
 .flat-list li {
   border-top: 1px solid lighten($dusty-purple, 50%);
@@ -74,6 +74,15 @@ body {
 
 .flat-list.contents li {
   color: $tangerine;
+
+  &:hover {
+    background-color: tint($tangerine, 95%)
+  }
+}
+
+.no-focus {
+  color: darken($white, 20%) !important;
+  background-color: darken($white, 30%) !important;
 }
 
 .display-inner {
@@ -91,15 +100,28 @@ body {
 }
 
 .thing-header {
-  color: $tangerine;
+  color: $bright-pink;
 }
 
 .edit-button {
   font-size: .4em;
-  color: $dusty-navy;
+  color: grey;
   border: 0px;
   padding: 5px;
   border-radius: 5px;
   background-color: $white;
-  // margin-bottom: 5%;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.edit-header {
+  font-weight: 900;
+  color: $teal;
+  font-size: 20px;
+}
+
+.header-center.edit-view {
+  background-color: lighten($light-yellow, 10%);
 }

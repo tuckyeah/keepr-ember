@@ -1,5 +1,5 @@
 {{thing-details/card content=content toggleDone='toggleDone'}}
-<p style="text-align: center; font-style: italic">From Category: {{content.category.name}} </p>
+<p class ="subheader">In Category: {{content.category.name}} </p>
 
 <div class="note-box">
   <p class="note-header">
@@ -15,15 +15,15 @@
     {{thing-details/add-notes content=content createNote='createNote'}}
   </li>
   </ul>
+  <div class="bottom-button-box clearfix">
+    {{thing-details/done-button content=content toggleDone='toggleDone'}}
+    <button class="btn btn-warning" style="display: inline-block; float: right;" {{action 'deleteContent'}}>
+      Forget about it!
+    </button>
+  </div>
+
 </div>
 
-<div class="bottom-button-box clearfix">
-  {{thing-details/done-button content=content toggleDone='toggleDone'}}
-  <button class="btn btn-danger" style="display: inline-block; float: right;" {{action 'deleteContent'}}>
-    Forget about it!
-  </button>
-</div>
-
-<div style="width: 50%; text-align: center; margin: auto;">
+<div style="width: 50%; text-align: center; margin: 20px auto;">
   {{back-button back='back'}}
 </div>

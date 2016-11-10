@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  flashMessages: Ember.inject.service(),
   auth: Ember.inject.service(),
 
   model (params) {
@@ -23,13 +24,13 @@ export default Ember.Route.extend({
           thing: response,
           category: response.category
         });
-        // console.log(contents);
-        // console.log(contents.save());
         return contents.save();
       }).then((response)=> {
         this.transitionTo('category-content', response);
       }).catch((err)=>{
         console.error(err);
+        this.get('flashMessages')
+        .danger('Something went wrong. Please try again.');
       });
     },
     back() {

@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
+  flashMessages: Ember.inject.service(),
+
   model (params) {
     return this.get('store').findRecord('category-content', (params.category_content_id));
 
@@ -10,8 +12,7 @@ export default Ember.Route.extend({
     createNote(cat_cont) {
       cat_cont.save();
     },
-    back(done_status) {
-      console.log(done_status);
+    back() {
       history.back();
     },
     toggleDone(content) {
@@ -19,6 +20,11 @@ export default Ember.Route.extend({
       content.save()
       .then(()=>{
         this.refresh();
+      })
+      .catch((err)=> {
+        console.error(err);
+        this.get('flashMessages')
+        .danger('Something went wrong.');
       });
     },
     deleteContent(content) {
@@ -28,6 +34,8 @@ export default Ember.Route.extend({
         history.back();
       }).catch((err) => {
         console.error(err);
+        this.get('flashMessages')
+        .danger('Something went wrong.');
       });
     }
   }

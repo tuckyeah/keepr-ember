@@ -9,6 +9,9 @@ export default Ember.Component.extend({
     },
     cancel () {
       this.sendAction('cancel', this.get('category'));
+    },
+    back() {
+      this.sendAction('back');
     }
   }
 });

@@ -1,18 +1,36 @@
-<h3 class="category-header">
-  <form {{action 'save' on='submit'}}>
-    {{input placeholder=category.name value=category.new_name}}
-    <button class="btn btn-x btn-primary" type="submit">
-      Save
-    </button>
-  </form>
+<div class="flex">
+  <div class="display-inner" style="padding: 15px">
+  <div class="header-center edit-view">
+    <span>
+      <form {{action 'save' on='submit'}} style="display: inline-block; width: inherit; margin-bottom: 10px;">
+          <span class="edit-header">Edit Category: </span>
+          {{input
+            class="form-control inline"
+            placeholder=category.name
+            value=category.new_name}}
+      </form>
+      <button class="btn btn-x btn-danger" {{action 'cancel'}}>
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+    </span>
+  </div>
 
-  <button class="btn btn-x btn-danger" {{action 'cancel'}}>
-    Cancel
-  </button>
-</h3>
 
-<ul>
-  {{#each category.things as |thing|}}
-    {{category-list/thing thing=thing}}
-  {{/each}}
-</ul>
+
+  <ul class="flat-list contents">
+    {{#each category.category_contents as |thing|}}
+    {{category-list/thing thing=thing
+      deleteThing='deleteThing'
+      showDetails='showDetails'
+      toggleDone='toggleDone'}}
+      {{else}}
+      <p style="text-align: center">Nothing here yet... add something!</p>
+      {{/each}}
+
+    <li>  {{add-thing category=model createThing='createThing'}} </li>
+    </ul>
+
+
+
+  </div>
+</div>

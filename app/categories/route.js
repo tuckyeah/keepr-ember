@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  flashMessages: Ember.inject.service(),
   auth: Ember.inject.service(),
 
   queryParams: {
@@ -16,8 +17,12 @@ export default Ember.Route.extend({
   actions: {
     createCat (newCat) {
       let cat = this.get('store').createRecord('category', newCat);
-      cat.save().then(() => {
-        this.refresh();
+      cat.save()
+      .then(() => { this.refresh(); })
+      .catch((err)=> {
+        console.error(err);
+        this.get('flashMessages')
+        .danger('Oh no! Something went wrong!');
       });
     },
     delete (category) {

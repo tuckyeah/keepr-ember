@@ -1,8 +1,11 @@
+<div class="flex">
 <div class="display-inner">
   <div class="header-center">
     <span class="category-header">
+      {{#link-to 'categories'}}
       Category: {{category-list/card title=category.name}}
-      <button class="edit-button" {{action 'edit'}}>
+      {{/link-to}}
+      <button class="edit-button" {{action 'edit'}} back='back'>
         <i class="fa fa-pencil-square" aria-hidden="true"></i>
         {{!-- <span style="font-size: 0.5em">edit title</span> --}}
       </button>
@@ -27,3 +30,4 @@
 
     {{back-button back='back'}}
   </div>
+</div>

@@ -11,6 +11,7 @@
 img {
   margin: 0 auto;
   text-align: center;
+  display: block;
 }
 
 .logo-center {
@@ -21,7 +22,6 @@ img {
 .small-image {
   width: 30vw;
   min-width: 250px;
-  margin-left: 25%;
 }
 
 .logo-header {
@@ -50,7 +50,8 @@ img {
 
 .display-inner {
   margin: 10px;
-  padding: 10px;
+  padding: 20px;
+  background-color: $white;
 
   ul {
     padding: 0px;
@@ -82,10 +83,22 @@ img {
 .header-center {
   margin: 0 auto;
   text-align: center;
+  min-width: 400px;
+  padding: 10px;
 
   .category-header {
     text-align: center;
     font-size: 3em;
+
+
+    a {
+      color: $teal;
+
+      &:hover {
+        color: darken($teal, 10%);
+        text-decoration: none;
+      }
+    }
   }
 
   .header-buttons {
@@ -99,6 +112,7 @@ img {
 
   &:hover {
     text-decoration: underline;
+    color: darken($tangerine, 20%);
   }
 }
 
@@ -107,9 +121,11 @@ img {
   width: 60%;
   margin: auto;
   padding: 25px;
+  background-color: $white;
+  box-shadow: 2px 2px 5px $black;
 
   .note-header {
-    font-size: 1.5em;
+    font-size: 1.8em;
     text-decoration: underline;
     font-weight: 900;
   }
@@ -118,6 +134,7 @@ img {
   }
 
   li {
+    font-size: 1.3em;
     list-style: none;
     border-bottom: 1px solid $light-blue;
     line-height: 2.5em;
@@ -127,17 +144,15 @@ img {
     border: 0px;
   }
 
-  .save-button {
-    float:right;
-  }
+  // .save-button {
+  //   float:right;
+  // }
 }
 
 .bottom-button-box {
-  width: 60%;
-  margin: auto;
-  text-align:center;
-  padding: 20px;
-
+  margin-top: 10px;
+  border-top: 3px solid lighten($dusty-navy, 30%);
+  padding: 15px;
   .done-button {
     margin: auto;
     float: left;
@@ -163,4 +178,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.form-control.inline {
+  display: inline-block !important;
+  font-size: 18px;
+}
+
+.subheader {
+  text-align: center;
+  // font-style: italic;
+  font-weight: 600;
+  color: darken($teal, 10%);
 }
