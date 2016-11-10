@@ -1,11 +1,11 @@
-<nav class="navbar navbar-default">
+<nav class="navbar custom-nav">
   <div class="container-fluid">
     {{navbar-header}}
 
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li>{{#link-to "categories" (query-params user="current")}}Categories{{/link-to}}</li>
+        <li class="categories-nav">{{#link-to "categories" (query-params user="current")}}My Categories{{/link-to}}</li>
         {{!-- <li><a href="" {{action "back" on="click"}}>Back</a></li> --}}
         {{/if}}
       </ul>

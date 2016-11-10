@@ -12,6 +12,7 @@ export default Ember.Route.extend({
     deleteThing (thing) {
       thing.deleteRecord();
       thing.save();
+      this.refresh();
     },
     edit (category) {
       this.transitionTo('category.edit', category);

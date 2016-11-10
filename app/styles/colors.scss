@@ -125,3 +125,37 @@ $border-color: $maroon;
 .header-center.edit-view {
   background-color: lighten($light-yellow, 10%);
 }
+
+.navbar.custom-nav {
+  // background-color: lighten($light-yellow, 10%);
+  // box-shadow: 0px 2px 5px black;
+  padding: 5px;
+  border-bottom: 5px solid $teal;
+
+  .navbar-brand {
+    border: 0px;
+
+    &:hover {
+      border: 0px;
+      color: inherit;
+      background: inherit;
+    }
+  }
+
+  a {
+    border: 1px solid $watermelon;
+    border-radius: 5px;
+    color: $watermelon;
+    font-weight: 700;
+
+    &:hover {
+      border: 1px solid $light-blue;
+      color: $light-blue;
+
+      background-color: lighten($light-blue, 30%);
+    }
+    &:focus {
+      background-color: lighten($light-yellow, 20%);
+    }
+  }
+}
