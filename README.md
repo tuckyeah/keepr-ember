@@ -15,7 +15,7 @@ A front-end web app built with Ember.js, Handlebars and Bootstrap/Sass.
 #### The Development Process
 
 <br>
-[User Stories](dev-docs/user-stories.md) || [ERD](dev-docs/Keepr_-_Page_1.png) || [Wireframe (rough)](dev-docs/wireframe_rough.jpg)
+[User Stories](./dev-docs/user-stories.md) || [ERD](./dev-docs/Keepr_-_Page_1.png) || [Wireframe (rough)](./dev-docs/wireframe_rough.jpg)
 <br>*better wireframes coming soon*
 
 
