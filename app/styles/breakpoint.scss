@@ -1,0 +1,17 @@
+@import 'breakpoints';
+
+@include breakpoint('tiny') {
+  .header-center {
+    min-width: 200px;
+
+    .category-header {
+      font-size: 2em;
+    }
+  }
+
+  .note-box {
+    margin: 5% auto;
+    width: 100%;
+  }
+
+}
